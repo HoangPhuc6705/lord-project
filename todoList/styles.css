@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #60B5FF;
+}
+
+.container {
+  background: #ffffff;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container .form {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+.container .form form {
+  display: flex;
+  width: inherit;
+  gap: 5px;
+}
+
+.form form #form-content {
+  width: 100%;
+  padding: 5px;
+  appearance: none;
+  border: 1px solid #949494;
+  outline: none;
+  border-radius: 3px;
+}
+
+.form form #button {
+  width: 80px;
+  border-radius: 3px;
+  appearance: none;
+  border: none;
+  background: #1B56FD;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.todo-task {
+  width: 100%;
+  height: 40px;
+  background-color: #f3f3f3;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #525252;
+}
