@@ -16,7 +16,21 @@ function createTodo(todo = new String()) {
   todoElememt.classList.add('todo-task')
   const checkBoxElement = document.createElement('input');
   checkBoxElement.type = 'checkbox';
-  todoElememt.innerHTML += todo;
+  checkBoxElement.classList.add('done-task');
+  checkBoxElement.addEventListener(('click'), () => {
+    handleDoneTask(todoElememt, checkBoxElement, todo);
+  });
+  todoElememt.innerHTML += `<p class="todo">${todo}</p>`;
   todoElememt.appendChild(checkBoxElement);
   todoList.prepend(todoElememt)
+}
+
+
+function handleDoneTask(element, checkBoxValue, content) {
+  const todo = element.querySelector('.todo');
+  if (checkBoxValue.checked) {
+    todo.innerHTML = `<s>${content}</s>`
+  } else {
+    todo.innerHTML = `${content}`;
+  }
 }

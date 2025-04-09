@@ -73,3 +73,7 @@ body {
   justify-content: space-between;
   color: #525252;
 }
+
+s {
+  text-decoration-thickness: 2px;
+}
