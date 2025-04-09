@@ -1,0 +1,296 @@
+/* @import "@fontsource/inter"; */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Parkinsans:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --background-theme: #FBF8EF;
+  --green-color: #5CB338;
+  --green-main-card: #0D4715;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background-theme);
+}
+
+.container {
+  display: flex;
+  min-height: inherit;
+}
+
+.container .left-panel {
+  width: 40%;
+  height: inherit;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.container .right-panel {
+  width: 60%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.left-panel .options-card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.options-card>label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+}
+
+.options-card>label>input {
+  appearance: none;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #ccc;
+  padding: 5px;
+  transition: border-color 0.3s ease;
+  font-size: 1.1em;
+  background: #f0f0f0;
+}
+
+.options-card>label>input:focus {
+  border-bottom: 3px solid var(--green-color);
+}
+
+.random-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.random-buttons>button {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  color: #f0f0f0;
+  background: var(--green-color);
+  border-radius: 5px;
+}
+
+#image-save-button {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  color: #f0f0f0;
+  font-size: 1.1em;
+  background: var(--green-color);
+  border-radius: 5px;
+}
+
+.right-panel .student-card {
+  width: 450px;
+  height: 280px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1.5fr 1.2fr repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  user-select: none;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 9;
+  background: var(--green-main-card);
+  font-size: 0.5em;
+  color: #f1f1f1;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+
+.div1 .education-name {
+  text-align: center;
+}
+
+.div2 {
+  grid-area: 2 / 1 / 3 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: var(--green-main-card);
+}
+
+.div3 {
+  grid-area: 3 / 1 / 7 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div3 .d1 {
+  display: flex;
+  justify-content: center;
+}
+
+.div3 .d1 #triangle-arrow {
+  margin-top: 10px;
+  width: 30%;
+  height: 40%;
+  background: var(--green-main-card);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.d2 #chip-card {
+  width: 85%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+.d4 #wave-card {
+  width: 85%;
+  height: 40px;
+}
+
+.div4 {
+  grid-area: 3 / 3 / 7 / 7;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.div4 #full-name {
+  font-weight: 900;
+  margin-top: 13px;
+  font-size: 1.1em;
+}
+
+.div5 {
+  grid-area: 3 / 7 / 7 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div5 #student-image-card {
+  width: 90%;
+  height: 90%;
+}
+
+#student-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.div6 {
+  grid-area: 7 / 1 / 8 / 7;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.div6 #begin-limited-card {
+  margin-left: 70px;
+  margin-right: 50px;
+}
+
+.div7 {
+  grid-area: 7 / 7 / 8 / 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 1px;
+}
+
+.div7 #student-id {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.div7 #bars-code {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.div7 #bars-code .simple-bar-code {
+  width: 100%;
+  height: 100%;
+}
+
+#bars-code .inside-simple-barcode {
+  height: 100%;
+  background: #000;
+}
+
+.div8 {
+  grid-area: 8 / 1 / 9 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div8 #seri-card {
+  font-weight: 900;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .left-panel,
+  .container .right-panel {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .right-panel .student-card {
+    min-width: 300px;
+    height: 270px;
+    /* width: 450px; */
+    /* height: 280px; */
+  }
+
+  .div4 {
+    font-size: 0.8em;
+  }
+
+  .div8 #seri-card {
+    font-size: 1em;
+  }
+}

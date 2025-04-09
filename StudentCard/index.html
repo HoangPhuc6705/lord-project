@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student card | HTML CSS TYPESCRIPT</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="options-card">
+        <h2>Thiết kế thẻ sinh viên NLU</h2>
+        <label>
+          <span>Họ và tên</span>
+          <input type="text" id="fullname" autocapitalize="words" autocomplete="off" placeholder="Nhập họ và tên">
+        </label>
+        <label>
+          <span>Ngày sinh</span>
+          <input type="date" id="born-input" autocomplete="off">
+        </label>
+        <label>
+          <span>Ngành</span>
+          <input type="text" id="major-input" autocomplete="off">
+        </label>
+        <label>
+          <span>Khoa</span>
+          <input type="text" id="faculty-input" autocomplete="off">
+        </label>
+        <label>
+          <span>Năm nhập học</span>
+          <input type="number" id="course-time-input" autocomplete="off">
+        </label>
+        <label>
+          <span>Mã số sinh viên</span>
+          <input type="number" id="student-id-input">
+        </label>
+        <label>
+          <span>Ảnh thẻ</span>
+          <input type="file" accept="image/*" id="image-input">
+        </label>
+        <div class="random-buttons">
+          <button id="random-barcode-button">Ngẫu nhiên barcode</button>
+          <button id="random-seri-number">Ngẫu nhiên số seri</button>
+        </div>
+        <button id="image-save-button">Tải ảnh</button>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="student-card">
+        <div class="div1">
+          <div>
+            <img src="./src/assets/nlu_logo.webp" width="35" alt="" crossorigin="anonymous">
+          </div>
+          <div class="education-name">
+            <span>BỘ GIÁO DỤC VÀ ĐÀO TẠO</span><br>
+            <span>TRƯỜNG ĐẠI HỌC NÔNG LÂM TP. HỒ CHÍ MINH</span>
+          </div>
+          <div>
+            <img src="./src/assets/LOGO-BIDV-tren-nen-mau-ngoai-cua-thuong-hieu-1400x447.webp" width="64" height="23"
+              alt=""
+              crossorigin="anonymous">
+          </div>
+        </div>
+        <div class="div2">
+          <span>THẺ SINH VIÊN</span>
+        </div>
+        <div class="div3">
+          <div class="d1">
+            <div id="triangle-arrow"></div>
+          </div>
+          <div class="d2">
+            <canvas id="chip-card"></canvas>
+          </div>
+          <div class="d3">
+          </div>
+          <div class="d4">
+            <canvas id="wave-card"></canvas>
+          </div>
+        </div>
+        <div class="div4">
+          <span id="full-name">HỌ VÀ TÊN SINH VIÊN</span>
+          <span id="born-date">Ngày sinh:</span>
+          <span id="major-name">Ngành:</span>
+          <span id="faculty-name">Khoa:</span>
+          <span id="course-data">Niên khoá:</span>
+        </div>
+        <div class="div5">
+          <div id="student-image-card">
+            <img src="./src/assets/istockphoto-1222357475-612x612.jpg" id="student-image" crossorigin="anonymous">
+          </div>
+        </div>
+        <div class="div6">
+          <span id="begin-limited-card">09/</span>
+          <span id="end-limited-card">09/</span>
+        </div>
+        <div class="div7">
+          <span id="student-id">00000000</span>
+          <div id="bars-code">
+          </div>
+        </div>
+        <div class="div8">
+          <span id="seri-card">0000 0000 0000 000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
